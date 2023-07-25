@@ -8,13 +8,13 @@ using ClothBazar.Entities;
 
 namespace ClothBazar.Database
 {
-    public class CBContext : DbContext
+    public class CBContext : DbContext, IDisposable
     {
         public CBContext() : base("ClothBazarConnection")
         {
-
         }
-        public DbSet<Category> Categorys { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
     }
 }
